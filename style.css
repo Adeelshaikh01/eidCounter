@@ -1,63 +1,56 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'poppins',Arial, Helvetica, sans-serif;
-}
-section{
+.main {
     display: flex;
-    min-width: 1400px !important;
-    position: fixed;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.left{
-    width: 50%;
-}
-img{
+
+img {
     width: 100%;
     height: auto;
     padding: 20px;
-    box-sizing: border-box;
 }
 
-.about{
-    padding: 15px;
-    position: absolute;
-    top: 30%;
-    box-sizing: border-box;
-    transform: translate(0%, -80%);
+.left {
+    width: 40%;
+    margin: auto 0;
 }
-.timer{
+
+.right {
+    padding: 10px;
+    text-align: center;
+    width: 60%;
+}
+
+.timer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
     padding: 15px;
-    position: absolute;
-    top: 60%;
-    box-sizing: border-box;
-    transform: translate(0%, -50%);
 }
 
-h1{
+h1 {
     position: relative;
     width: 100%;
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    color:rgb(77, 77, 77);
+    color: rgb(77, 77, 77);
 }
 
-h2{
-    color:tomato;
+h2 {
+    color: tomato;
 }
 
-.timer > h2{
+.timer>h2 {
     font-size: 50px;
 }
-p{
-    color:gray;
+
+p {
+    color: gray;
 }
 
-.box{
+.box {
     position: relative;
     width: 150px;
     height: 150px;
@@ -66,21 +59,51 @@ p{
     border-radius: 50%;
 }
 
-.box > p{
+.box>p {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 80px;
     font-weight: bold;
-    color:tomato;
+    color: tomato;
 }
 
-.box > span{
+.box>span {
     position: absolute;
     top: 60%;
     transform: translate(-50%, -50%);
     font-size: 15px;
     text-transform: uppercase;
-    color:gray;
+    color: gray;
+}
+
+#show{
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+    .left {
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .right {
+        width: 100%;
+        margin: 10px;
+    }
+
+    img {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    .box>p {
+        font-size: 40px;
+    }
+    .box{
+        width: 100px;
+    }
 }

@@ -17,6 +17,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("timer").style.display = "none";
+    document.getElementById("show").style.display = "block";
     document.getElementById("eid").innerHTML = "EID MUBARAK!";
   }
 }, 10);
